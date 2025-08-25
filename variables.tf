@@ -1407,6 +1407,7 @@ variable "default_network_acl_name" {
 }
 
 variable "default_network_acl_ingress" {
+  nullable = false
   description = "List of maps of ingress rules to set on the Default Network ACL"
   type        = list(map(string))
   default = [
@@ -1430,6 +1431,7 @@ variable "default_network_acl_ingress" {
 }
 
 variable "default_network_acl_egress" {
+  nullable = false
   description = "List of maps of egress rules to set on the Default Network ACL"
   type        = list(map(string))
   default = [
